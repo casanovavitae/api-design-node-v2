@@ -4,6 +4,10 @@ import { createServer } from 'http'
 import app from './server'
 let currentApp = app
 
+currentApp.listen(3000, ()=>{
+	console.log('listen on port 3000')
+})
+
 
 if (module.hot) {
 	module.hot.accept(['./server'], () => {
